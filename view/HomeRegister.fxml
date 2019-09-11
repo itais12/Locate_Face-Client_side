@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<HBox xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.HomeRegisterController">
+	<children>
+		<BorderPane minHeight="-Infinity" minWidth="-Infinity"
+			prefHeight="600.0" prefWidth="800.0"
+			style="-fx-background-color: azure;" HBox.hgrow="ALWAYS">
+			<bottom>
+				<Button fx:id="startRecoButton" defaultButton="true"
+					mnemonicParsing="false" onMouseClicked="#startRecoClick"
+					text="Register worker" BorderPane.alignment="CENTER">
+					<BorderPane.margin>
+						<Insets bottom="35.0" />
+					</BorderPane.margin>
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Button>
+			</bottom>
+			<center>
+				<GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="567.0" minWidth="10.0" prefWidth="567.0" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="567.0" minWidth="10.0" prefWidth="567.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<PasswordField fx:id="hRpassword"
+							alignment="BOTTOM_CENTER" layoutX="327.0" layoutY="152.0"
+							promptText="Enter HR password" GridPane.columnIndex="1"
+							GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</PasswordField>
+						<TextField fx:id="nameField" alignment="BOTTOM_CENTER"
+							promptText="Enter name" GridPane.columnIndex="1"
+							GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="IDField" alignment="CENTER"
+							promptText="Enter ID" GridPane.columnIndex="1"
+							GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="emailField" alignment="CENTER"
+							promptText="Enter Email" GridPane.columnIndex="1"
+							GridPane.rowIndex="3">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="roleField" alignment="CENTER"
+							layoutX="60.0" layoutY="128.0" promptText="Enter role"
+							GridPane.columnIndex="1" GridPane.rowIndex="4">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="departmentField" alignment="CENTER"
+							layoutX="60.0" layoutY="76.0" promptText="Enter department"
+							GridPane.columnIndex="1" GridPane.rowIndex="6">
+							<GridPane.margin>
+								<Insets left="40.0" right="40.0" />
+							</GridPane.margin>
+							<font>
+								<Font size="15.0" />
+							</font>
+						</TextField>
+						<CheckBox fx:id="managerPermissionBox"
+							mnemonicParsing="false" GridPane.columnIndex="1"
+							GridPane.halignment="CENTER" GridPane.rowIndex="5">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+							<font>
+								<Font size="16.0" />
+							</font>
+						</CheckBox>
+						<Label alignment="CENTER" layoutX="127.0" layoutY="147.0"
+							text="HR Password" textAlignment="CENTER" textFill="#3f16e4"
+							GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+							<font>
+								<Font name="System Bold" size="30.0" />
+							</font>
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>
+						<Label alignment="CENTER" text="Name" textAlignment="CENTER"
+							GridPane.halignment="CENTER" GridPane.rowIndex="1">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+						<Label text="ID" textAlignment="CENTER"
+							GridPane.halignment="CENTER" GridPane.rowIndex="2"
+							GridPane.valignment="CENTER">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+						<Label alignment="CENTER" text="Email"
+							textAlignment="CENTER" GridPane.halignment="CENTER"
+							GridPane.rowIndex="3" GridPane.valignment="CENTER">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+						<Label layoutX="10.0" layoutY="80.0" text="Role"
+							GridPane.halignment="CENTER" GridPane.rowIndex="4">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+						<Label layoutX="10.0" layoutY="132.0" text="Department"
+							GridPane.halignment="CENTER" GridPane.rowIndex="6">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+						<Label text="M. permissions" GridPane.halignment="CENTER"
+							GridPane.rowIndex="5">
+							<font>
+								<Font size="30.0" />
+							</font>
+						</Label>
+					</children>
+					<padding>
+						<Insets top="20.0" />
+					</padding>
+				</GridPane>
+			</center>
+			<top>
+				<GridPane maxHeight="1.7976931348623157E308"
+					maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+					minWidth="-Infinity" BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints halignment="CENTER"
+							hgrow="SOMETIMES" maxWidth="1.7976931348623157E308"
+							minWidth="-Infinity" />
+					</columnConstraints>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+					</padding>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label alignment="CENTER" prefHeight="70.0"
+							prefWidth="329.0" text=" Registeration " textAlignment="CENTER"
+							textFill="#461ec9" GridPane.halignment="CENTER">
+							<font>
+								<Font size="48.0" />
+							</font>
+						</Label>
+						<Button fx:id="settingsButton" contentDisplay="BOTTOM"
+							defaultButton="true" mnemonicParsing="false"
+							onMouseClicked="#settingsClick" prefWidth="143.0" text="Settings"
+							GridPane.halignment="RIGHT">
+							<font>
+								<Font name="System Bold" size="20.0" />
+							</font>
+						</Button>
+					</children>
+				</GridPane>
+			</top>
+		</BorderPane>
+	</children>
+</HBox>

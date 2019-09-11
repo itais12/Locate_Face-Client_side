@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.CheckBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FaceDetectionController">
+	<children>
+		<BorderPane prefHeight="322.0" prefWidth="337.0" style="-fx-background-color: azure;" HBox.hgrow="ALWAYS">
+			<top>
+				<VBox alignment="CENTER" BorderPane.alignment="CENTER">
+					<children>
+						<Text fill="#2e1ccd" layoutX="100.0" stroke="#cdcdcd08" strokeType="OUTSIDE" strokeWidth="0.0" text="Taking pictures" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+							<font>
+								<Font size="48.0" />
+							</font>
+						</Text>
+                  <Text fx:id="amountText" fill="#e40202" stroke="#cdcdcd08" strokeType="OUTSIDE" strokeWidth="0.0" text="0/num " textAlignment="CENTER" wrappingWidth="191.83203125">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+						<Separator />
+					</children>
+				</VBox>
+			</top>
+			<center>
+				<VBox alignment="CENTER">
+					<padding>
+						<Insets left="10" right="10" />
+					</padding>
+					<children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+      						<ImageView fx:id="originalFrame" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+					</children>
+				</VBox>
+			</center>
+		</BorderPane>
+	</children>
+</HBox>

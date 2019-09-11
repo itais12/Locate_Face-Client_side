@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+	<children>
+		<BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: azure;" HBox.hgrow="ALWAYS">
+			<top>
+				<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="TOP_CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+					
+						<Text fill="#240cff" strokeType="OUTSIDE" strokeWidth="0.0" text="system settings" GridPane.halignment="CENTER">
+							<font>
+								<Font size="58.0" />
+							</font>
+							<GridPane.margin>
+								<Insets bottom="10.0" />
+							</GridPane.margin>
+						</Text>
+						<Button fx:id="backButton" defaultButton="true" mnemonicParsing="false" onMouseClicked="#backClicked" text="Back" GridPane.halignment="RIGHT">
+							<GridPane.margin>
+								<Insets right="15.0" />
+							</GridPane.margin>
+							<font>
+								<Font name="System Bold" size="20.0" />
+							</font>
+						</Button>
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+					</padding>
+				</GridPane>
+			</top>
+			<center>
+				<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Text fill="#6f22b2" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrator Password" textAlignment="CENTER" wrappingWidth="293.388671875">
+							<font>
+								<Font size="33.0" />
+							</font>
+						</Text>
+						<PasswordField fx:id="adminPasswordField" alignment="CENTER" promptText="Enter password" GridPane.columnIndex="1">
+							<GridPane.margin>
+								<Insets right="20.0" />
+							</GridPane.margin>
+						</PasswordField>
+						<Text fill="#6f22b2" strokeType="OUTSIDE" strokeWidth="0.0" text="Host" textAlignment="CENTER" wrappingWidth="293.388671875" GridPane.rowIndex="1">
+							<font>
+								<Font size="33.0" />
+							</font>
+						</Text>
+						<TextField fx:id="hostField" alignment="CENTER" promptText="Enter host" GridPane.columnIndex="1" GridPane.rowIndex="1">
+							<GridPane.margin>
+								<Insets right="20.0" />
+							</GridPane.margin>
+						</TextField>
+						<Text fill="#6f22b2" strokeType="OUTSIDE" strokeWidth="0.0" text="Port" textAlignment="CENTER" wrappingWidth="293.388671875" GridPane.rowIndex="2">
+							<font>
+								<Font size="33.0" />
+							</font>
+						</Text>
+						<TextField fx:id="portField" alignment="CENTER" promptText="Enter port" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets right="20.0" />
+							</GridPane.margin>
+						</TextField>
+						<Text fill="#6f22b2" strokeType="OUTSIDE" strokeWidth="0.0" text="Tablet Mode" textAlignment="CENTER" wrappingWidth="293.388671875" GridPane.rowIndex="3">
+							<font>
+								<Font size="33.0" />
+							</font>
+						</Text>
+						<CheckBox fx:id="tabletBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+							<font>
+								<Font size="16.0" />
+							</font>
+						</CheckBox>
+					</children>
+					<BorderPane.margin>
+						<Insets top="10.0" />
+					</BorderPane.margin>
+				</GridPane>
+			</center>
+			<bottom>
+				<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0" BorderPane.alignment="CENTER">
+					<children>
+						<Button fx:id="identifyButton" alignment="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#identifyModeClick" prefHeight="100.0" prefWidth="150.0" text="Identify" textAlignment="CENTER">
+							<font>
+								<Font name="System Bold" size="24.0" />
+							</font>
+							<HBox.margin>
+								<Insets bottom="15.0" />
+							</HBox.margin>
+						</Button>
+						<Pane minHeight="1.0" minWidth="10.0" HBox.hgrow="ALWAYS">
+							<HBox.margin>
+								<Insets left="40.0" right="40.0" />
+							</HBox.margin>
+						</Pane>
+						<Button fx:id="registerButton" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#registerModeClick" prefHeight="100.0" prefWidth="150.0" text="Register">
+							<font>
+								<Font name="System Bold" size="24.0" />
+							</font>
+							<HBox.margin>
+								<Insets bottom="15.0" />
+							</HBox.margin>
+						</Button>
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="100.0" right="100.0" top="10.0" />
+					</padding>
+				</HBox>
+			</bottom>
+		</BorderPane>
+	</children>
+</HBox>
